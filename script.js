@@ -1,4 +1,4 @@
-function printLines() {
+/*function printLines() {
   console.log(secondLine);
 
   var firstLine = "I'm your first line!";
@@ -6,10 +6,10 @@ function printLines() {
 
   var secondLine = "I'm your second line";
   console.log(secondLine);
-}
+}*/
 
 //matrix //
-
+/*
 var matrix = [
   [1, 2, 3],
   ["John", "Jane", "Mike"],
@@ -18,22 +18,22 @@ var matrix = [
 matrix[0][1];
 matrix[2][2];
 matrix[0][4] = 5;
-matrix[1] = [];
+matrix[1] = [];*/
 
 //function //
 
-function myFunc(a, b) {
+/*function myFunc(a, b) {
   if (!b) {
     b = 1;
   }
   return a + b;
 }
 
-myFunc(1);
+myFunc(1);*/
 
 // DOG //
 
-var dog = {
+/*var dog = {
   breed: "Golden retriever",
   bark: function () {
     return "Wuf Wuf";
@@ -43,76 +43,62 @@ var dog = {
 console.log(dog.breed);
 console.log(dog.bark());
 
-var crniPas = dog("crni pas");
+var crniPas = dog("crni pas");*/
 
 // Polaznici //
 
 var polaznici = [
   {
-    name: 'Igor ',
-    surname: 'Boroja'
+    name: "Igor ",
+    surname: "Boroja",
     age: 18,
-  }
+  },
 
   {
-    name: 'Ivan ',
-    surname: 'Munitić'
+    name: "Ivan ",
+    surname: "Munitić",
     age: 13,
-  }
+  },
 
   {
-    name: 'Aleks ',
-    surname: 'Ivanac'
+    name: "Aleks ",
+    surname: "Ivanac",
     age: 24,
-  }
+  },
 
   {
-    name: 'Danijel ',
-    surname: 'Hrgić'
+    name: "Danijel ",
+    surname: "Hrgić",
     age: 67,
-  }
+  },
 
   {
-    name: 'Darko ',
-    surname: 'Šušnjar'
-    age: 12,
-  }
+    name: "Luka ",
+    surname: "Modrić",
+  },
 ];
 
-function checkAge(age){
-var ageResponse = '';
+function checkAge(age, name, surname) {
+  var ageResponse = "";
+  var fullName = name + "" + surname;
 
-switch (true){
-  case age <18:
-  ageResponse = "Ovo je maloljetnik/maloljetnica";
-  break;
-  case age >= 18 && age <67:
-  ageResponse = "Ovo je punoljetnik/punoljetnica";
-  break;
-  case age >= 67:
-  ageResponse = "Ovo je umirovljenik/umirovljenica"
-  break;
-  default:
-    ageResponse = "Ova se osoba još nije rodila";
+  switch (true) {
+    case age < 18:
+      ageResponse = fullName + " je maloljetnik/maloljetnica";
+      break;
+    case age >= 18 && age < 67:
+      ageResponse = fullName + "je punoljetnik/punoljetnica";
+      break;
+    case age >= 67:
+      ageResponse = fullName + " je umirovljenik/umirovljenica";
+      break;
+    default:
+      ageResponse = fullName + " se osoba još nije rodila";
+  }
+
+  return ageResponse;
 }
 
-return ageResponse;
-}
-
-
-  if (age <18){
-    return 'Ovo je maloljetnik/maloljetnica';
-   } else if (age >= && age < 67){
-return 'Ovo je punoljetnik/punoljetnica'
-   } else {
-     return 'Ovo je umirovljenik/umirovljenica'
-   }
-  
-}
-
-polaznici.forEach(polaznik) => {
-  console.log('Ime' + polaznik.name)
-  console.log(checkAge(polaznik.age));
-}
-
-
+polaznici.forEach((polaznik) => {
+  console.log(checkAge(polaznik.age, polaznik.name, polaznik.surname));
+});
