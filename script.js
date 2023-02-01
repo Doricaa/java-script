@@ -30,3 +30,12 @@ function myFunc(a, b) {
 }
 
 myFunc(1);
+
+var dog = {
+  breed: "Golden retriever",
+  bark: function () {
+    return "Wuf Wuf";
+  },
+};
+
+console.log(dog.breed);
