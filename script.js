@@ -44,3 +44,75 @@ console.log(dog.breed);
 console.log(dog.bark());
 
 var crniPas = dog("crni pas");
+
+// Polaznici //
+
+var polaznici = [
+  {
+    name: 'Igor ',
+    surname: 'Boroja'
+    age: 18,
+  }
+
+  {
+    name: 'Ivan ',
+    surname: 'Munitić'
+    age: 13,
+  }
+
+  {
+    name: 'Aleks ',
+    surname: 'Ivanac'
+    age: 24,
+  }
+
+  {
+    name: 'Danijel ',
+    surname: 'Hrgić'
+    age: 67,
+  }
+
+  {
+    name: 'Darko ',
+    surname: 'Šušnjar'
+    age: 12,
+  }
+];
+
+function checkAge(age){
+var ageResponse = '';
+
+switch (true){
+  case age <18:
+  ageResponse = "Ovo je maloljetnik/maloljetnica";
+  break;
+  case age >= 18 && age <67:
+  ageResponse = "Ovo je punoljetnik/punoljetnica";
+  break;
+  case age >= 67:
+  ageResponse = "Ovo je umirovljenik/umirovljenica"
+  break;
+  default:
+    ageResponse = "Ova se osoba još nije rodila";
+}
+
+return ageResponse;
+}
+
+
+  if (age <18){
+    return 'Ovo je maloljetnik/maloljetnica';
+   } else if (age >= && age < 67){
+return 'Ovo je punoljetnik/punoljetnica'
+   } else {
+     return 'Ovo je umirovljenik/umirovljenica'
+   }
+  
+}
+
+polaznici.forEach(polaznik) => {
+  console.log('Ime' + polaznik.name)
+  console.log(checkAge(polaznik.age));
+}
+
+
