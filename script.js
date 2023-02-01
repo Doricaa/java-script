@@ -31,6 +31,8 @@ function myFunc(a, b) {
 
 myFunc(1);
 
+// DOG //
+
 var dog = {
   breed: "Golden retriever",
   bark: function () {
@@ -39,3 +41,6 @@ var dog = {
 };
 
 console.log(dog.breed);
+console.log(dog.bark());
+
+var crniPas = dog("crni pas");
