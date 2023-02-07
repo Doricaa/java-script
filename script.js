@@ -102,3 +102,20 @@ function checkAge(age, name, surname) {
 polaznici.forEach((polaznik) => {
   console.log(checkAge(polaznik.age, polaznik.name, polaznik.surname));
 });
+
+/*console.log("Širina" + window.innerWidth);
+console.log(window.location.hostname);
+window.location.href;
+window.location.replace;
+alert('ja sam javascript');
+window.confirm('We use cookies on this website. Do you agree to enter?');*/
+
+function sendEmail() {
+  const alertMessageEl = document.querySelector(".alert-message");
+
+  alertMessageEl.style.display = "block";
+
+  setTimeout(() => {
+    alertMessageEl.style.display = "none";
+  }, 3000);
+}
