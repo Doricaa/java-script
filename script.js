@@ -1,16 +1,39 @@
-const descriptionEl = document.querySelector(".description");
-const footerEl = document.querySelector("#footer");
-const ulEl = document.querySelector("ul");
-
-const h1 = document.createElement("h1");
-h1.innerText = "Zbilja smo jako smo pametni!";
-descriptionEl.parentNode.prepend(h1);
-
-const infoDiv = document.createElement("div");
-infoDiv.classList.add("info");
-footerEl.parentNode.insertBefore(infoDiv, footerEl);
-
-for (let i = 0; i < 3; i++) {
-  const li = document.createElement("li");
-  ulEl.appendChild(li);
+function myFunction() {
+  document.getElementById("myList").style.listStyle = "decimal";
 }
+
+const infoEl = document.getElementsByClassName("info")[0];
+infoEl.classList.add("hide");
+
+//infoEl.classList.add("hide");
+
+const liElement = document.querySelector("li");
+const liElements = document.querySelectorAll("li");
+
+console.log(liElement);
+console.log(liElements);
+console.log(liElements[0]);
+
+const bodyEl = document.querySelector("body");
+const bodyStyles = window.getComputedStyle(bodyEl);
+const bodyMargin = bodyStyles.getPropertyValue("margin");
+let bodyMarginValue = parseInt(bodyMargin);
+let isReverse = false;
+
+setInterval(() => {
+  if (isReverse) {
+    bodyMarginValue--;
+  } else {
+    bodyMarginValue++;
+  }
+
+  if (bodyMarginValue === 300) {
+    isReverse = true;
+  }
+
+  if (bodyMarginValue === 0) {
+    isReverse = false;
+  }
+
+  bodyEl.style.margin = bodyMarginValue + "px";
+}, 100);
